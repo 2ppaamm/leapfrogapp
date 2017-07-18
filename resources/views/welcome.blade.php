@@ -159,17 +159,19 @@
             <div class="section-sub-title">
                 How we started
             </div>
-            <p>I had to travel to Harvard from Asia to complete a course on campus in order to fulfil the residency requirement for a degree I was taking. I could not graduate unless I made it to campus by Summer 2017, and so I wasn't choosy. I just picked the only digital media course the university offered that summer: Video Field Production.
-            </p>
-            <p>Prior to this, I’ve never held a DSLR camera in my life, much less produce a video of any quality worth mentioning. In three weeks, from an illiterate with cameras, I could actually shoot and put together movies. Over the last two years, it was clear to me that the written word and still photography are losing their charms in this social media world. Audience demand moving images and the large social media companies are pouring resources to tap on this market. I had to wait this long to do something about it, and unintentionally so.
-            </p>
-            <p>In the midst of trying to absorb all I could in the three weeks about video making, my impulse for talent hunting entrepreneurs in order to nurture them was not put on the back burner. So when the professor asked me about how I teach entrepreneurship, I found myself looking at him and thinking if I could bring out the businessman in him. He has a wonderful personality and is ready to create a great venture.
-            </p>
-            <p>So, I told him what I saw: that he has the relevant skills and there is a right window of market opportunity to create something. And so the venture began, a Harvard student who talent-spotted her professor, and under her tutelage, he will become a successful entrepreneur.
-            </p>
-            <p>An unbelievable story and totally true. Going forward, only time can tell if I am right about the market, the problem we can solve together and the talent I discovered in young Professor Manley, who is now my co-founder, Nick.
-            </p>
-            <p>~ Pamela Lim</p>
+            <div class="col-lg-12 wp2 delay-1s">  
+                <p>I had to travel to Harvard from Asia to complete a course on campus in order to fulfil the residency requirement for a degree I was taking. I could not graduate unless I made it to campus by Summer 2017, and so I wasn't choosy. I just picked the only digital media course the university offered that summer: Video Field Production.
+                </p>
+                <p>Prior to this, I’ve never held a DSLR camera in my life, much less produce a video of any quality worth mentioning. In three weeks, from an illiterate with cameras, I could actually shoot and put together movies. Over the last two years, it was clear to me that the written word and still photography are losing their charms in this social media world. Audience demand moving images and the large social media companies are pouring resources to tap on this market. I had to wait this long to do something about it, and unintentionally so.
+                </p>
+                <p>In the midst of trying to absorb all I could in the three weeks about video making, my impulse for talent hunting entrepreneurs in order to nurture them was not put on the back burner. So when the professor asked me about how I teach entrepreneurship, I found myself looking at him and thinking if I could bring out the businessman in him. He has a wonderful personality and is ready to create a great venture.
+                </p>
+                <p>So, I told him what I saw: that he has the relevant skills and there is a right window of market opportunity to create something. And so the venture began, a Harvard student who talent-spotted her professor, and under her tutelage, he will become a successful entrepreneur.
+                </p>
+                <p>An unbelievable story and totally true. Going forward, only time can tell if I am right about the market, the problem we can solve together and the talent I discovered in young Professor Manley, who is now my co-founder, Nick.
+                </p>
+                <p>~ Pamela Lim</p>
+            </div>
             <div class="section-sub-title">
                 Our innovations
             </div>
