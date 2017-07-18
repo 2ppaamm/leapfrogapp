@@ -65,7 +65,7 @@
                         <a href="blog.html">Production Blog</a>
                     </li>
                     <li>
-                        <a href="#">SignIn</a>
+                        <a href="#" onclick="window.signin();">SignIn</a>
                     </li>
                 </ul>
             </div>
@@ -159,7 +159,7 @@
             <div class="section-sub-title">
                 How we started
             </div>
-            <div class="col-lg-12 wp2 delay-1s">  
+            <div class="col-lg-12 delay-1s">  
                 <p>I had to travel to Harvard from Asia to complete a course on campus in order to fulfil the residency requirement for a degree I was taking. I could not graduate unless I made it to campus by Summer 2017, and so I wasn't choosy. I just picked the only digital media course the university offered that summer: Video Field Production.
                 </p>
                 <p>Prior to this, I’ve never held a DSLR camera in my life, much less produce a video of any quality worth mentioning. In three weeks, from an illiterate with cameras, I could actually shoot and put together movies. Over the last two years, it was clear to me that the written word and still photography are losing their charms in this social media world. Audience demand moving images and the large social media companies are pouring resources to tap on this market. I had to wait this long to do something about it, and unintentionally so.
@@ -692,6 +692,22 @@
       
     <!-- Custom Theme JavaScript -->
     <script src="js/main.js"></script>
+    <!-- Auth0 scripts -->
+    <script src="//cdn.auth0.com/js/lock/10.0/lock.min.js"></script>
+    <script type="text/javascript">
+
+      var lock = new Auth0Lock('O9B4LZwvQzAaNRib00vLahCrQdcm2swE', 'pamelalim.auth0.com');
+
+
+      function signin() {
+        lock.show({
+           responseType: 'code'
+          , authParams: {
+            scope: 'openid email'  // Learn about scopes: https://auth0.com/docs/scopes
+          }
+        });
+      }
+    </script>
 
 </body>
 
