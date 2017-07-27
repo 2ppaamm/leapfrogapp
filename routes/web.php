@@ -25,3 +25,5 @@ Route::get('/dashboard', 'DashboardController@index');
 Route::get('/auth0/callback', function() {
    dd(Auth0::getUser());
 });
+
+Route::auth();

@@ -67,7 +67,20 @@
                     <li>
                         <a href="#" onclick="window.signin();">SignIn</a>
                     </li>
-                </ul>
+                    @if(Auth::check())
+                      <!-- Table -->
+                      <table class="table">
+                          <tr>
+                              <th>Character</th>
+                              <th>Real Name</th>
+                          </tr>
+                          @foreach($characters as $key => $value)
+                            <tr>
+                              <td></td><td></td>
+                            </tr>
+                          @endforeach
+                      </table>
+                    @endif                </ul>
             </div>
             <!-- /.navbar-collapse -->
         </div>
@@ -701,8 +714,9 @@
 
       function signin() {
         lock.show({
-           responseType: 'code'
-          , authParams: {
+           callbackURL: 'http://localhost/auth0/callback',            
+           responseType: 'code',
+           authParams: {
             scope: 'openid email'  // Learn about scopes: https://auth0.com/docs/scopes
           }
         });
