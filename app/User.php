@@ -26,4 +26,15 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function blogs()
+    {
+        return $this->hasMany('leapfrog\blog','owner');
+    }
+
+    public function videos()
+    {
+        return $this->hasMany('leapfrog\video', 'owner');
+    }
+
 }

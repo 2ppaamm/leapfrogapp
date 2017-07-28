@@ -15,8 +15,8 @@ class Topictable extends Migration
     {
         Schema::create('topics', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('topic');
-            $table->string('description');
+            $table->text('topic');
+            $table->text('description');
             $table->string('image');
             $table->timestamps();
         });

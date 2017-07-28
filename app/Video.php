@@ -9,14 +9,14 @@ class Video extends Model
     /**
      * Get the owner for the video.
      */
-    public function owner()
+    public function author()
     {
-        return $this->belongsTo('leapfrog\User');
+        return $this->belongsTo('leapfrog\User', 'owner');
     }
 
-    public function approver()
+    public function approved_by()
     {
-    	return $this->belongsTo('leapfrog\User');
+    	return $this->belongsTo('leapfrog\User', 'approver');
     }
 
     public function countries()

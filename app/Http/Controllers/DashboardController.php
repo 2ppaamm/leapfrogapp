@@ -3,6 +3,8 @@
 namespace leapfrog\Http\Controllers;
 
 use Illuminate\Http\Request;
+use leapfrog\Blog;
+use leapfrog\Video;
 
 class DashboardController extends Controller
 {
@@ -17,6 +19,8 @@ class DashboardController extends Controller
 	* GET /dashboard
 	*/
     public function index() {
-        return 'Here are all dashboard info...';
+    	$videos = Video::with('author')->get();
+		$blogs = Blog::with('author')->get();		
+    	return view('welcome')->with(['blogs' => $blogs, 'videos' => $videos]);
 	}
 }

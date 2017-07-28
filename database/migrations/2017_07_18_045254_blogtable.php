@@ -16,8 +16,8 @@ class Blogtable extends Migration
     {
         Schema::create('blogs', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('title');
-            $table->string('body');
+            $table->text('title');
+            $table->text('body');
             $table->string('videolink');
             $table->string('image');
             $table->integer('owner')->unsigned();

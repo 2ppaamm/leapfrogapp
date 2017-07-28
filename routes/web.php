@@ -26,4 +26,6 @@ Route::get('/auth0/callback', function() {
    dd(Auth0::getUser());
 });
 
+Route::get('blog', 'BlogController@index');
+
 Route::auth();

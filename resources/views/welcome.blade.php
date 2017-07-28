@@ -52,9 +52,9 @@
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
-                    <!--li class="page-scroll">
-                        <a href="#gallery">Documentaries</a>
-                    </li-->
+                    <li class="page-scroll">
+                        <a href="#gallery">Trailers</a>
+                    </li>
                     <li class="page-scroll">
                         <a href="#about">About Us</a>
                     </li>
@@ -62,7 +62,7 @@
                         <a href="#contact">Contact</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="blog.html">Production Blog</a>
+                        <a href="#blog">Production Blog</a>
                     </li>
                     <li>
                         <a href="#" onclick="window.signin();">SignIn</a>
@@ -91,7 +91,7 @@
     <!-- Intro Section -->
     <section id="intro">
         <div class="video-content">  
-            <video autoplay loop id="video-background" muted plays-inline controls>
+            <video autoplay loop class="video-background" muted plays-inline controls>
               <source src="https://player.vimeo.com/external/225763613.hd.mp4?s=34a319c3476dd8ba43ab7473accb86f845d0fda3&profile_id=174" type="video/mp4">
             </video>
             
@@ -112,144 +112,134 @@
 
                     <div class="media-btns buttons page-scroll">
                         <a class="btn btn-default about-btn" href="#about">About Us<i class="fa fa-chevron-right"></i></a>
-                        <!--a class="btn btn-default about-btn" href="#gallery">Documentaries<i class="fa fa-chevron-right"></i></a-->
+                        <a class="btn btn-default about-btn" href="#gallery">Documentaries<i class="fa fa-chevron-right"></i></a>
                         <div class="btn btn-default play-btn" id="play-button">Unmute Video<i class="fa fa-play animated"></i></div>
                         <div class="btn btn-default pause-btn" id="pause-button">Mute Video<i class="fa fa-pause animated"></i></div>
                     </div>
                 </div>
             </div>
         </div>
-
     </section><!-- /#intro --> 
 
     <!-- Gallery Section -->
-    <!--section id="gallery">
+    <section id="gallery">
     <div class="overlay"></div>
     
-    <div class="section-wrapper wp8 delay-05s">
-    <div class="row">
-      <div class="col-sm-12 col-md-6 no-padding">
-        <div class="video-background">
-            <video height="auto" poster="img/video-img.jpg" controls="controls" preload="none" onclick="this.play()">
-                <source src="https://player.vimeo.com/external/158148793.hd.mp4?s=8e8741dbee251d5c35a759718d4b0976fbf38b6f&profile_id=119&oauth2_token_id=57447761" type="video/mp4">
-            </video>
-            <div class="actor-info">
-                <h4 class="heading">Clash of the Titans</h4>
-                <h5 class="sub-heading">Synopsis</h5>
-            </div--> <!-- /.actor-info -->        
-        <!--/div>
-      </div>
-      <div class="col-sm-12 col-md-6 no-padding">
-        <div class="video-background">
-            <video height="auto" poster="img/video-img.jpg" controls="controls" preload="none" onclick="this.play()">
-                <source src="https://player.vimeo.com/external/19816776.hd.mp4?s=4500615818e69953e6bc9a436c59e982da2608cd&profile_id=113" type="video/mp4">
-            </video>
-            <div class="actor-info">
-                <h4 class="heading">The Adventures of Bot Bot</h4>
-                <h5 class="sub-heading">Synopsis</h5>
-            </div> <!-- /.actor-info -->        
-        <!--/div>
-      </div>
-    </div>
+    <div class="container wp8 delay-05s">
+        <h1 class="section-title">Trailers</h1>
+        <div class="row">
+          @foreach ($videos as $video)
+          <div class="col-sm-12 col-md-6 no-padding">
+            <div class="video-background">
+                <video height="auto" poster="{{$video->poster}}" controls="controls" preload="none" onclick="this.play()">
+                    <source src="{{$video->videolink}}">
+                </video>
+                <div class="actor-info">
+                    <h4 class="heading">{{$video->title}}</h4>
+                    <h5 class="sub-heading">{{$video->synopsis}}</h5>
+                </div> <!-- /.actor-info -->        
+            </div>
+          </div>
+          @endforeach
+        </div>
     </div>
     </section><!-- /#gallery -->    
 
     <!-- About Section -->
     <section id="about">
-            <div class="more page-scroll" id="more">
-            <a href="#about"><i class="fa fa-angle-down"></i></a>
-            </div>
-
-            
-    <div class="container wp2">
-    <h1 class="section-title">About Us</h1>
-    <p>LeapFrogger is in the businesss of creating, distributing and licensing media contents and documentaries that tell stories about human's innovations in solving social issues.</p>
-
-        <!-- Advantages -->
-        <div class="advantages">
-            <!--div class="section-sub-title">
-                Our innovations
-            </div>
-            <div class="colored-line"></div>
-            
-            <div class="container">
-                <div class="col-md-4 advantages-item wp7 delay-05s">
-                    <div class="advantages-item-icon"><i class="fa fa-star-o"></i></div>
-                    <h3>USP 1</h3>
-                    <p>
-                    Say something here, Nick.
-                    </p> 
-                </div--><!-- /.col-md-4 -->        
-        
-                <!--div class="col-md-4 advantages-item wp7">
-                    <div class="advantages-item-icon"><i class="fa fa-flag-o"></i></div>
-                    <h3>USP2</h3>
-                    <p>
-                    Doesn't have to be 3 USP. Can be any number. Help me here.<span class="text-light"><i class="fa fa-user"></i>- 2062 Actors. </span> Aenean commodo ligula eget dolor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-                    </p> 
-                </div--><!-- /.col-md-4 -->   
-                
-                <!--div class="col-md-4 advantages-item wp7 delay-05s">
-                    <div class="advantages-item-icon"><i class="fa fa-thumbs-o-up"></i></div>
-                    <h3>USP3</h3>
-                    <p>
-                    And here.
-                    </p> 
-                </div--><!-- /.col-md-4 -->
-            <!--/div>           
-       </div><!-- /.advantages -->  
-        <hr> 
-        <div class="section-sub-title">
-            Our Team
+        <div class="more page-scroll" id="more">
+        <a href="#about"><i class="fa fa-angle-down"></i></a>
         </div>
-        <div class="row">
-            <div class="col-lg-6 wp2 delay-05s">   
-              <div class="movie-disc">
-              <div class="movie-avatar">
-                      <div class="movie-avatar-img">
-                            <img src="img/nickmanley.png" alt="Nick Manley">
-                      </div><!-- /.movie-avatar-img --> 
-                  </div><!-- /.movie-disc --> 
-              </div><!-- /.movie-avatar --> 
 
-            </div><!-- /.col-lg-6 -->
             
-            <div class="col-lg-6 wp2 delay-1s">  
-            <h2>Nick <span class="text-color">Manley</span></h2>
-            <h4 class="sub-text">Co-Founder, Creative</h4>         
-            <br>
+        <div class="container wp2">
+            <h1 class="section-title">About Us</h1>
+            <p>LeapFrogger is in the businesss of creating, distributing and licensing media contents and documentaries that tell stories about human's innovations in solving social issues.</p>
+
+            <!-- Advantages -->
+            <!--div class="advantages"-->
+                <!--div class="section-sub-title">
+                    Our innovations
+                </div>
+                <div class="colored-line"></div>
+                
+                <div class="container">
+                    <div class="col-md-4 advantages-item wp7 delay-05s">
+                        <div class="advantages-item-icon"><i class="fa fa-star-o"></i></div>
+                        <h3>USP 1</h3>
+                        <p>
+                        Say something here, Nick.
+                        </p> 
+                    </div--><!-- /.col-md-4 -->        
             
-            <p>Nick Manley is a Texas based director, cinematographer, and producer with a background in Art History and Operations Management. His passion is in cultural exploration through immersive documentary filmmaking.
-            </p>
-            <p>His work has screened at film festivals in the US, UK, Greece, Argentina, Mexico, Lebanon, Venezuela, Portugal, Italy, France, Spain, Poland, Israel, and Romania.</p>
-            <p>He teaches Cinematography and Film Production at Texas A&M University and Harvard.</p> 
-            </div><!-- /.col-lg-6 -->
-        </div><!-- /.row -->
-        <div class="row">
-            <div class="col-lg-6 wp2 delay-05s">   
-              <div class="movie-disc">
-              <div class="movie-avatar">
-                      <div class="movie-avatar-img">
-                            <img src="img/pamelalim.jpg" alt="Pamela Lim">
-                      </div><!-- /.movie-avatar-img --> 
-                  </div><!-- /.movie-disc --> 
-              </div><!-- /.movie-avatar --> 
+                    <!--div class="col-md-4 advantages-item wp7">
+                        <div class="advantages-item-icon"><i class="fa fa-flag-o"></i></div>
+                        <h3>USP2</h3>
+                        <p>
+                        Doesn't have to be 3 USP. Can be any number. Help me here.<span class="text-light"><i class="fa fa-user"></i>- 2062 Actors. </span> Aenean commodo ligula eget dolor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                        </p> 
+                    </div--><!-- /.col-md-4 -->   
+                    
+                    <!--div class="col-md-4 advantages-item wp7 delay-05s">
+                        <div class="advantages-item-icon"><i class="fa fa-thumbs-o-up"></i></div>
+                        <h3>USP3</h3>
+                        <p>
+                        And here.
+                        </p> 
+                    </div--><!-- /.col-md-4 -->
+                <!--/div>           
+           </div><!-- /.advantages -->  
+            <div class="section-sub-title">
+                Our Team
+            </div>
+            <div class="row">
+                <div class="col-lg-6 wp2 delay-05s">   
+                  <div class="movie-disc">
+                  <div class="movie-avatar">
+                          <div class="movie-avatar-img">
+                                <img src="img/nickmanley.png" alt="Nick Manley">
+                          </div><!-- /.movie-avatar-img --> 
+                      </div><!-- /.movie-disc --> 
+                  </div><!-- /.movie-avatar --> 
 
-            </div><!-- /.col-lg-6 -->
-            
-            <div class="col-lg-6 wp2 delay-1s">  
-            <h2>Pamela <span class="text-color">Lim</span></h2>
-            <h4 class="sub-text">Co-Founder, Business<br>
-            </h4>
-            <br>
+                </div><!-- /.col-lg-6 -->
+                
+                <div class="col-lg-6 wp2 delay-1s">  
+                <h2>Nick <span class="text-color">Manley</span></h2>
+                <h4 class="sub-text">Co-Founder, Creative</h4>         
+                <br>
+                
+                <p>Nick Manley is a Texas based director, cinematographer, and producer with a background in Art History and Operations Management. His passion is in cultural exploration through immersive documentary filmmaking.
+                </p>
+                <p>His work has screened at film festivals in the US, UK, Greece, Argentina, Mexico, Lebanon, Venezuela, Portugal, Italy, France, Spain, Poland, Israel, and Romania.</p>
+                <p>He teaches Cinematography and Film Production at Texas A&M University and Harvard.</p> 
+                </div><!-- /.col-lg-6 -->
+            </div><!-- /.row -->
+            <div class="row">
+                <div class="col-lg-6 wp2 delay-05s">   
+                  <div class="movie-disc">
+                  <div class="movie-avatar">
+                          <div class="movie-avatar-img">
+                                <img src="img/pamelalim.jpg" alt="Pamela Lim">
+                          </div><!-- /.movie-avatar-img --> 
+                      </div><!-- /.movie-disc --> 
+                  </div><!-- /.movie-avatar --> 
 
-            <p>Pamela Lim was a well-known entrepreneur in Asia 10 years ago. Her passion and drive as an entrepreneur helped her excel in the fast-paced, dog-eat-dog world of business where so few succeed. She has won numerous entrepreneur awards in Singapore and the rest of Asia, including Top 10 Woman entrepreneur in 1999, The Most Promising Woman Entrepreneur in 2000 and Netrepreneur of the Year in 2001.
-            <p>Pamela started a company with just three employees which grew into one that has business and operations in 7 countries. The company managed to get approved for dual-listing in NASDAQ and SGX, a commendable feat as it’s the first ever Singapore company to achieve a first level listing approval.</p>
-            <p>She selflessly gave up the entrepreneurial and business world in 2004 with the passing of her father-in-law to raise her 5 young children. She started teaching and took to it with zealous dedication since 2004.</p>
-            <p>LeapFrogger is her new initiative to launch into a media content world.  ... I don't know... anyhow write for now.</p>
+                </div><!-- /.col-lg-6 -->
+                
+                <div class="col-lg-6 wp2 delay-1s">  
+                <h2>Pamela <span class="text-color">Lim</span></h2>
+                <h4 class="sub-text">Co-Founder, Business<br>
+                </h4>
+                <br>
 
-            </div><!-- /.col-lg-6 -->
-        </div><!-- /.row -->
+                <p>Pamela Lim was a well-known entrepreneur in Asia 10 years ago. Her passion and drive as an entrepreneur helped her excel in the fast-paced, dog-eat-dog world of business where so few succeed. She has won numerous entrepreneur awards in Singapore and the rest of Asia, including Top 10 Woman entrepreneur in 1999, The Most Promising Woman Entrepreneur in 2000 and Netrepreneur of the Year in 2001.
+                <p>Pamela started a company with just three employees which grew into one that has business and operations in 7 countries. The company managed to get approved for dual-listing in NASDAQ and SGX, a commendable feat as it’s the first ever Singapore company to achieve a first level listing approval.</p>
+                <p>She selflessly gave up the entrepreneurial and business world in 2004 with the passing of her father-in-law to raise her 5 young children. She started teaching and took to it with zealous dedication since 2004.</p>
+                <p>LeapFrogger is her new initiative to launch into a media content world.  ... I don't know... anyhow write for now.</p>
+
+                </div><!-- /.col-lg-6 -->
+            </div><!-- /.row -->
             <div class="section-sub-title">
                 How we started
             </div>
@@ -547,110 +537,36 @@
     
 
     <!-- Blog Section -->
-    <!--section id="blog">
+    <section id="blog">
     <div class="container"> 
-        <div class="row">      
         <div class="col-lg-12 wp9 delay-05s">
-        <h1 class="section-title">Production Blog<i class="fa fa-calendar-o"></i></h1>
+            <h1 class="section-title">Production Blog<i class="fa fa-calendar-o"></i></h1>
+        </div>
+        <div class="row">      
+            <div class="col-lg-12 wp2 delay-05s">                
+            <!-- 01 -->
+                <div class="blog-item blog-item-full">
+                    @foreach($blogs as $blog)
 
-           <div id="owl-blog"-->
-                  
-               <!-- 01 -->
-               <!--div class="item">
-               <div class="prev-blog-item">
-                    <h3>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. </p>
-                    <a href="blog-page.html">View blog post</a>
-               </div--><!-- /.prev-blog-item -->   
-
-               <!--div class="blog-item">
-                    <div class="blog-item-img"><img src="img/blog/01.jpg" alt=""></div>
+                        <div class="blog-item-img"><a href="{{$blog->image}}" class="popup"><img src="{{$blog->image}}" alt="image of {{$blog->title}}"></a></div>
+                        <div class="blog-item-info page-scroll">
+                            <span>{{ \Carbon\Carbon::parse($blog->publish_date)->format('d')}}</span>
+                            <small>{{ \Carbon\Carbon::parse($blog->publish_date)->format('M \'y')}}</small>
+                            <a href="blog-page.html#comments-area">by <small>{{$blog->author->name}}</small></a>
+                        </div><!-- /.blog-item-info --> 
+                        
+                        <div class="blog-item-text">
+                            <h3><a href="blog-page.html">{{$blog->title}}</a></h3>
+                            <p>{{$blog->body}}</p>
+                        </div><!-- /.blog-item-text --> 
+                    <hr>
+                    @endforeach
+                </div><!-- blog-item -->
                     
-                    <div class="blog-item-info page-scroll">
-                    <span>08</span>
-                    <small>Feb</small>
-                    <a href="blog-page.html#comments-area"><i class="fa fa-comments-o"></i><small>145</small></a>
-                    </div--><!-- /.blog-item-info --> 
-                    
-                    <!--div class="blog-item-text">
-                    <h3><a href="blog-page.html">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</a></h3>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. </p>
-                    </div--><!-- /.blog-item-text --> 
-                    
-                <!--/div>
-
-                <div class="next-blog-item">
-                    <h3>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. </p>
-                    <a href="blog-page.html">View blog post</a>
-                </div--><!-- /.prev-blog-item --> 
-                <!--/div--><!-- /.item --> 
-           
-                <!-- 02 -->
-                <!--div class="item">
-                <div class="prev-blog-item">
-                    <h3>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. </p>
-                    <a href="blog-page.html">View blog post</a>
-                </div--><!-- /.prev-blog-item -->   
-
-                <!--div class="blog-item">
-                    <div class="blog-item-img"><img src="img/blog/02.jpg" alt=""></div>
-                    
-                    <div class="blog-item-info page-scroll">
-                    <span>08</span>
-                    <small>Feb</small>
-                    <a href="blog-page.html#comments-area"><i class="fa fa-comments-o"></i><small>145</small></a>
-                    </div--><!-- /.blog-item-info --> 
-                    
-                    <!--div class="blog-item-text">
-                    <h3><a href="blog-page.html">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</a></h3>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. </p>
-                    </div--><!-- /.blog-item-text --> 
-                 <!--/div>
-
-                 <div class="next-blog-item">
-                    <h3>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. </p>
-                    <a href="blog-page.html">View blog post</a>
-                 </div--><!-- /.prev-blog-item --> 
-                <!--/div--><!-- /.item -->           
-           
-                <!-- 03 -->
-                <!--div class="item">
-                <div class="prev-blog-item">
-                    <h3>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. </p>
-                    <a href="blog-page.html">View blog post</a>
-                </div--><!-- /.prev-blog-item -->   
-
-                <!--div class="blog-item">
-                    <div class="blog-item-img"><img src="img/blog/03.jpg" alt=""></div>
-                    
-                    <div class="blog-item-info page-scroll">
-                    <span>08</span>
-                    <small>Feb</small>
-                    <a href="blog-page.html#comments-area"><i class="fa fa-comments-o"></i><small>145</small></a>
-                    </div--><!-- /.blog-item-info --> 
-                    
-                    <!--div class="blog-item-text">
-                    <h3><a href="blog-page.html">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</a></h3>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. </p>
-                    </div--><!-- /.blog-item-text -->
-                 <!--/div> 
-
-                 <div class="next-blog-item">
-                    <h3>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. </p>
-                    <a href="blog-page.html">View blog post</a>
-                 </div--><!-- /.prev-blog-item --> 
-                 <!--/div--><!-- /.item --> 
-           <!--/div--><!-- /.owl-blog --> 
-              
-        <!--/div--><!-- /.col-lg-12 --> 
-    <!--/div--><!-- /.row -->           
-    <!--/div--><!-- /.container --> 
-    <!--/section--><!-- /#blog -->  
+            </div><!-- /.col-lg-12 -->
+        </div>
+    </div> 
+    </section><!-- /#blog -->  
 
     <!-- Contact Section -->
     <section id="contact">
@@ -683,7 +599,7 @@
         <div class="copyright">
         © Created With <i class="fa fa-heart"></i> by <a href="http://www.leap-frogger.com"> - LeapFrogger</a>
         <br>
-        2017 Year
+        2017
         </div>
         <div class="footer-line">All rights reserved</div>
         </div><!-- /.row --> 

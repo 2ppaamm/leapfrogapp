@@ -16,8 +16,8 @@ class Videotable extends Migration
     {
         Schema::create('videos', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('title');
-            $table->string('synopsis');
+            $table->text('title');
+            $table->text('synopsis');
             $table->string('videolink');
             $table->string('poster');
             $table->integer('owner')->unsigned();
