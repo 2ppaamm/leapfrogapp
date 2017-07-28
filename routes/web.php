@@ -11,9 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Route::get('/login', 'DashboardController@login');
 Route::get('/logout', function() {
@@ -21,7 +18,7 @@ Route::get('/logout', function() {
     return Redirect::home();
 });
 
-Route::get('/dashboard', 'DashboardController@index');
+Route::get('/', 'DashboardController@index');
 Route::get('/auth0/callback', function() {
    dd(Auth0::getUser());
 });
