@@ -52,9 +52,9 @@
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
-                    <li class="page-scroll">
+                    <!--li class="page-scroll">
                         <a href="#gallery">Documentaries</a>
-                    </li>
+                    </li-->
                     <li class="page-scroll">
                         <a href="#about">About Us</a>
                     </li>
@@ -112,7 +112,7 @@
 
                     <div class="media-btns buttons page-scroll">
                         <a class="btn btn-default about-btn" href="#about">About Us<i class="fa fa-chevron-right"></i></a>
-                        <a class="btn btn-default about-btn" href="#gallery">Documentaries<i class="fa fa-chevron-right"></i></a>
+                        <!--a class="btn btn-default about-btn" href="#gallery">Documentaries<i class="fa fa-chevron-right"></i></a-->
                         <div class="btn btn-default play-btn" id="play-button">Unmute Video<i class="fa fa-play animated"></i></div>
                         <div class="btn btn-default pause-btn" id="pause-button">Mute Video<i class="fa fa-pause animated"></i></div>
                     </div>
