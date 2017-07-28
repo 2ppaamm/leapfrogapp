@@ -657,7 +657,10 @@
             <div class="row">      
                 <div class="col-lg-12">
                     <h4 class="section-title">LeapFrogger Instagram</h4>
-                    <iframe src="http://lightwidget.com/widgets/cb100889e2a15931a18a9c88578dd200.html" width="100%" height="500"></iframe>
+
+                    <!-- LightWidget WIDGET -->
+                    <script src="//lightwidget.com/widgets/lightwidget.js"></script>
+                    <iframe src="//lightwidget.com/widgets/1894275466d05614b1d967d4001e746b.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
                 </div>
             </div>
         <div class="container text-center">
@@ -665,7 +668,7 @@
                 <div class="col-lg-12 wp11">
                     
                     <ul class="social-buttons">
-                        <li><a href="https://instagram.com/nickjmanley"><i class="fa fa-instagram fa-fw"></i> <span>Instagram</span></a></li>
+                        <li><a href="https://www.instagram.com/leap.frogger/"><i class="fa fa-instagram fa-fw"></i> <span>Instagram</span></a></li>
                         <li><a href="https://www.facebook.com/LeapFrogger-2009616019254641/"><i class="fa fa-facebook fa-fw"></i> <span>Facebook</span></a></li>
                         <li><a href="https://vimeo.com/user5998830"><i class="fa fa-vimeo fa-fw"></i> <span>Vimeo</span></a></li>
                         <li><a href="https://www.linkedin.com/company-beta/11201308/"><i class="fa fa-linkedin fa-fw"></i> <span>LinkedIn</span></a></li>
@@ -701,7 +704,6 @@
     <script src="js/lib/flipclock/flipclock.js"></script>
     <script src="js/lib/jquery.animateNumber.js"></script>
     <script src="js/lib/waypoints.min.js"></script>
-    <script src="js/lib/instafeed.min.js"></script>
       
     <!-- Custom Theme JavaScript -->
     <script src="js/main.js"></script>
