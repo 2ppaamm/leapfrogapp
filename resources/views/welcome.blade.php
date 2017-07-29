@@ -64,22 +64,12 @@
                     <li class="page-scroll">
                         <a href="#blog">Production Blog</a>
                     </li>
+                    @if(Auth::check())
+                    <li><a href="#">Hello!</a></li>
+                    @else
                     <li>
                         <a href="#" onclick="window.signin();">SignIn</a>
                     </li>
-                    @if(Auth::check())
-                      <!-- Table -->
-                      <table class="table">
-                          <tr>
-                              <th>Character</th>
-                              <th>Real Name</th>
-                          </tr>
-                          @foreach($characters as $key => $value)
-                            <tr>
-                              <td></td><td></td>
-                            </tr>
-                          @endforeach
-                      </table>
                     @endif
                 </ul>
             </div>
