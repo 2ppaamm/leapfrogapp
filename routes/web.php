@@ -12,17 +12,15 @@
 */
 
 
-Route::get('/login', 'DashboardController@login');
+//Route::get('/login', 'DashboardController@login');
 Route::get('/logout', function() {
     Auth::logout();
     return Redirect::home();
 });
 
 Route::get('/', 'DashboardController@index');
-Route::get('/auth0/callback', function() {
+Route::get('/#', function() {
    dd(Auth0::getUser());
 });
-
-Route::get('blog', 'BlogController@index');
 
 Route::auth();

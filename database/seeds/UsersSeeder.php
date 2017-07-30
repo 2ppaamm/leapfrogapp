@@ -14,6 +14,20 @@ class UsersSeeder extends Seeder
     {
     	$faker = Faker\Factory::create();
 
+		  $user = User::create([
+		    'name' => 'Nick Manley',
+		    'email' => 'nick@leap-frogger.com',
+		    'password' => bcrypt('leapleap'),
+		    'is_admin'=>TRUE
+		  ]);
+
+		  $user = User::create([
+		    'name' => 'Pamela Lim',
+		    'email' => 'pam@leap-frogger.com',
+		    'password' => bcrypt('leapleap'),
+		    'is_admin'=>TRUE
+		  ]);
+
 		for ($i = 0; $i < 20; $i++)
 		{
 		  $user = User::create([

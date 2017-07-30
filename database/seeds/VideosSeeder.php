@@ -14,7 +14,7 @@ class VideosSeeder extends Seeder
     {
     	$faker = Faker\Factory::create();
 
-		for ($i = 0; $i < 2; $i++)
+		for ($i = 0; $i < 0; $i++)
 		{
 		  $video = Video::create([
 		    'title' => $faker->realText($maxNbChars = 30, $indexSize = 2),

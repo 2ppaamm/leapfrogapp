@@ -68,7 +68,8 @@
                     <li><a href="#">Hello!</a></li>
                     @else
                     <li>
-                        <a href="#" onclick="window.signin();">SignIn</a>
+                        <!--a href="#login">Admin</a-->
+                        <a href="#" onclick="window.signin();">Admin</a>
                     </li>
                     @endif
                 </ul>
@@ -116,6 +117,7 @@
     <div class="overlay"></div>
     
     <div class="container wp8 delay-05s">
+        @if (count($videos)>0)
         <h1 class="section-title">Trailers</h1>
         <div class="row">
           @foreach ($videos as $video)
@@ -132,6 +134,7 @@
           </div>
           @endforeach
         </div>
+        @endif
     </div>
     </section><!-- /#gallery -->    
 
@@ -547,7 +550,7 @@
                         
                         <div class="blog-item-text">
                             <h3><a href="blog-page.html">{{$blog->title}}</a></h3>
-                            <p>{{$blog->body}}</p>
+                            <p>{!!$blog->body!!}</p>
                         </div><!-- /.blog-item-text --> 
                     <hr>
                     @endforeach
@@ -571,14 +574,15 @@
             </div>
         <div class="container text-center">
             <div class="row">
-                <div class="col-lg-12 wp11">
+                <div class="col-lg-12 wp12">
                     
                     <ul class="social-buttons">
                         <li><a href="https://www.instagram.com/leap.frogger/"><i class="fa fa-instagram fa-fw"></i> <span>Instagram</span></a></li>
                         <li><a href="https://www.facebook.com/LeapFrogger-2009616019254641/"><i class="fa fa-facebook fa-fw"></i> <span>Facebook</span></a></li>
                         <li><a href="https://vimeo.com/user5998830"><i class="fa fa-vimeo fa-fw"></i> <span>Vimeo</span></a></li>
                         <li><a href="https://www.linkedin.com/company-beta/11201308/"><i class="fa fa-linkedin fa-fw"></i> <span>LinkedIn</span></a></li>
-                        <li><a href="https://youtube.com/"><i class="fa fa-youtube fa-fw"></i> <span>You Tube</span></a></li>
+                        <li><a href="https://www.youtube.com/channel/UCUSyXGOKtPlNDH0JcQFk8jA"><i class="fa fa-youtube fa-fw"></i> <span>YouTube</span></a></li>
+                        <li><a href="http://i.youku.com/leapfrogger"><img src="img/youku-logo.png"/><br><span>YouKu</span></a></li>
                     </ul>
                     
                 </div><!-- /.col-lg-12 --> 
@@ -596,6 +600,72 @@
     </div><!-- /.container -->        
     </section><!-- /#contact --> 
 
+    <!--section id="login"--><!--login -->
+        <!--div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Login</div>
+                        <div class="panel-body">
+                            <form class="form-horizontal" method="POST" action="{{ route('login') }}">
+                                {{ csrf_field() }}
+
+                                <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                                    <label for="email" class="col-md-4 control-label">E-Mail Address</label>
+
+                                    <div class="col-md-6">
+                                        <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
+
+                                        @if ($errors->has('email'))
+                                            <span class="help-block">
+                                                <strong>{{ $errors->first('email') }}</strong>
+                                            </span>
+                                        @endif
+                                    </div>
+                                </div>
+
+                                <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+                                    <label for="password" class="col-md-4 control-label">Password</label>
+
+                                    <div class="col-md-6">
+                                        <input id="password" type="password" class="form-control" name="password" required>
+
+                                        @if ($errors->has('password'))
+                                            <span class="help-block">
+                                                <strong>{{ $errors->first('password') }}</strong>
+                                            </span>
+                                        @endif
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="col-md-6 col-md-offset-4">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Remember Me
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="col-md-8 col-md-offset-4">
+                                        <button type="submit" class="btn btn-primary">
+                                            Login
+                                        </button>
+
+                                        <a class="btn btn-link" href="{{ route('password.request') }}">
+                                            Forgot Your Password?
+                                        </a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section--> <!--login -->
 
     <!-- Core JavaScript Files -->
     <script src="js/jquery-1.10.2.js"></script>
