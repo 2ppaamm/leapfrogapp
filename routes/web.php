@@ -19,8 +19,11 @@ Route::get('/logout', function() {
 });
 
 Route::get('/', 'DashboardController@index');
-Route::get('/#', function() {
+
+Route::get('/auth0/callback', function() {
    dd(Auth0::getUser());
 });
 
 Route::auth();
+
+Route::get('/home', 'HomeController@index')->name('home');

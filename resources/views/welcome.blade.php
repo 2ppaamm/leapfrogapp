@@ -65,7 +65,7 @@
                         <a href="#blog">Production Blog</a>
                     </li>
                     @if(Auth::check())
-                    <li><a href="#">Hello!</a></li>
+                    <li><a href="/logout">Logout</a></li>
                     @else
                     <li>
                         <!--a href="#login">Admin</a-->
@@ -530,6 +530,7 @@
     
 
     <!-- Blog Section -->
+    @if (count($blogs) > 0)
     <section id="blog">
     <div class="container"> 
         <div class="col-lg-12 wp9 delay-05s">
@@ -560,6 +561,7 @@
         </div>
     </div> 
     </section><!-- /#blog -->  
+    @endif
 
     <!-- Contact Section -->
     <section id="contact">
