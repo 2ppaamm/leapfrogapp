@@ -68,8 +68,8 @@
                     <li><a href="/logout">Logout</a></li>
                     @else
                     <li>
-                        <!--a href="#login">Admin</a-->
-                        <a href="#" onclick="window.signin();">Admin</a>
+                        <a href="/login">Admin</a>
+                        <!--a href="#" onclick="window.signin();">Admin</a-->
                     </li>
                     @endif
                 </ul>
@@ -227,9 +227,9 @@
                 <br>
 
                 <p>Pamela Lim was a well-known entrepreneur in Asia 10 years ago. Her passion and drive as an entrepreneur helped her excel in the fast-paced, dog-eat-dog world of business where so few succeed. She has won numerous entrepreneur awards in Singapore and the rest of Asia, including Top 10 Woman entrepreneur in 1999, The Most Promising Woman Entrepreneur in 2000 and Netrepreneur of the Year in 2001.
-                <p>Pamela started a company with just three employees which grew into one that has business and operations in 7 countries. The company managed to get approved for dual-listing in NASDAQ and SGX, a commendable feat as it’s the first ever Singapore company to achieve a first level listing approval.</p>
-                <p>She selflessly gave up the entrepreneurial and business world in 2004 with the passing of her father-in-law to raise her 5 young children. She started teaching and took to it with zealous dedication since 2004.</p>
-                <p>LeapFrogger is her new initiative to launch into a media content world.  ... I don't know... anyhow write for now.</p>
+                <p>Pamela started a company with just three employees which grew into one that has business and operations in 7 countries. The company managed to get approved for dual-listing in NASDAQ and Singapore Stock Exchange, a commendable feat as it’s the first ever Singapore company to achieve a first level listing approval.</p>
+                <p>She gave up the entrepreneurial and business world in 2004 with the passing of her father-in-law to raise her 5 young children. She started teaching and took to it with zealous dedication since 2004.</p>
+                <p>In recent years, her involvement is largely in finding new angles to education and investing in businesses that have potential to change the world. She founded Leapfrogger believing it will make an impactful world change.</p>
 
                 </div><!-- /.col-lg-6 -->
             </div><!-- /.row -->
